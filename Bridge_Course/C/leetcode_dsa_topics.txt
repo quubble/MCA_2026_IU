@@ -1,2 +1,3 @@
 Array practice from leetcode - https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/
 Array practice from leetcode - https://leetcode.com/problems/two-sum/solutions/3619262/3-methods-c-java-python-beginner-friendl-x595/
+Array practice from leetcode - https://leetcode.com/explore/interview/card/top-interview-questions-easy/
