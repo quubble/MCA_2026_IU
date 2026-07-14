@@ -1,0 +1,359 @@
+Certainly — here is a single neatly formatted C assignment file containing all 13 programs, each with comments and a sample output section. The exercises are the standard Chapter 1 “Getting Started” problems from *Let Us C*. [scribd](https://www.scribd.com/document/325183864/let-us-c-chapter-1-pdf)
+
+```c
+/*  Assignment: Chapter 1 - Getting Started
+    Programs (a) to (m)
+    Author: Your Name
+    Date:   Enter Date Here
+*/
+
+#include <stdio.h>
+
+/* (a) Gross salary */
+void gross_salary() {
+    float basic, da, hra, gross;
+    printf("\n(a) Gross Salary\n");
+    printf("Enter basic salary: ");
+    scanf("%f", &basic);
+
+    da = 0.40f * basic;
+    hra = 0.20f * basic;
+    gross = basic + da + hra;
+
+    printf("Gross salary = %.2f\n", gross);
+
+    /* Sample Output:
+       Enter basic salary: 10000
+       Gross salary = 16000.00
+    */
+}
+
+/* (b) Distance conversion */
+void distance_conversion() {
+    float km;
+    printf("\n(b) Distance Conversion\n");
+    printf("Enter distance in kilometers: ");
+    scanf("%f", &km);
+
+    printf("Meters      = %.2f\n", km * 1000);
+    printf("Feet        = %.2f\n", km * 3280.84);
+    printf("Inches      = %.2f\n", km * 39370.08);
+    printf("Centimeters = %.2f\n", km * 100000);
+
+    /* Sample Output:
+       Enter distance in kilometers: 2
+       Meters      = 2000.00
+       Feet        = 6561.68
+       Inches      = 78740.16
+       Centimeters = 200000.00
+    */
+}
+
+/* (c) Aggregate and percentage */
+void aggregate_percentage() {
+    int m1, m2, m3, m4, m5, agg;
+    float percent;
+
+    printf("\n(c) Aggregate and Percentage\n");
+    printf("Enter marks in 5 subjects: ");
+    scanf("%d%d%d%d%d", &m1, &m2, &m3, &m4, &m5);
+
+    agg = m1 + m2 + m3 + m4 + m5;
+    percent = agg / 5.0f;
+
+    printf("Aggregate = %d\n", agg);
+    printf("Percentage = %.2f%%\n", percent);
+
+    /* Sample Output:
+       Enter marks in 5 subjects: 78 69 88 91 74
+       Aggregate = 400
+       Percentage = 80.00%
+    */
+}
+
+/* (d) Fahrenheit to Centigrade */
+void fahrenheit_to_centigrade() {
+    float f, c;
+    printf("\n(d) Fahrenheit to Centigrade\n");
+    printf("Enter temperature in Fahrenheit: ");
+    scanf("%f", &f);
+
+    c = (f - 32) * 5 / 9;
+
+    printf("Temperature in Centigrade = %.2f\n", c);
+
+    /* Sample Output:
+       Enter temperature in Fahrenheit: 98.6
+       Temperature in Centigrade = 37.00
+    */
+}
+
+/* (e) Rectangle and circle */
+void rectangle_circle() {
+    float l, b, r, pi = 3.14159f;
+    float area_rect, peri_rect, area_circle, circum_circle;
+
+    printf("\n(e) Rectangle and Circle\n");
+    printf("Enter length, breadth and radius: ");
+    scanf("%f%f%f", &l, &b, &r);
+
+    area_rect = l * b;
+    peri_rect = 2 * (l + b);
+    area_circle = pi * r * r;
+    circum_circle = 2 * pi * r;
+
+    printf("Rectangle area = %.2f\n", area_rect);
+    printf("Rectangle perimeter = %.2f\n", peri_rect);
+    printf("Circle area = %.2f\n", area_circle);
+    printf("Circle circumference = %.2f\n", circum_circle);
+
+    /* Sample Output:
+       Enter length, breadth and radius: 5 4 3
+       Rectangle area = 20.00
+       Rectangle perimeter = 18.00
+       Circle area = 28.27
+       Circle circumference = 18.85
+    */
+}
+
+/* (f) Interchange two numbers */
+void interchange_numbers() {
+    int c, d, temp;
+    printf("\n(f) Interchange Two Numbers\n");
+    printf("Enter C and D: ");
+    scanf("%d%d", &c, &d);
+
+    temp = c;
+    c = d;
+    d = temp;
+
+    printf("After interchange:\n");
+    printf("C = %d\n", c);
+    printf("D = %d\n", d);
+
+    /* Sample Output:
+       Enter C and D: 10 20
+       After interchange:
+       C = 20
+       D = 10
+    */
+}
+
+/* (g) Sum of digits of a five-digit number */
+void sum_of_digits() {
+    int n, sum = 0, digit;
+    printf("\n(g) Sum of Digits\n");
+    printf("Enter a five-digit number: ");
+    scanf("%d", &n);
+
+    while (n > 0) {
+        digit = n % 10;
+        sum += digit;
+        n /= 10;
+    }
+
+    printf("Sum of digits = %d\n", sum);
+
+    /* Sample Output:
+       Enter a five-digit number: 12345
+       Sum of digits = 15
+    */
+}
+
+/* (h) Reverse a five-digit number */
+void reverse_number() {
+    int n, rev = 0, digit;
+    printf("\n(h) Reverse Number\n");
+    printf("Enter a five-digit number: ");
+    scanf("%d", &n);
+
+    while (n > 0) {
+        digit = n % 10;
+        rev = rev * 10 + digit;
+        n /= 10;
+    }
+
+    printf("Reversed number = %d\n", rev);
+
+    /* Sample Output:
+       Enter a five-digit number: 12345
+       Reversed number = 54321
+    */
+}
+
+/* (i) Sum of first and last digit of a four-digit number */
+void sum_first_last_digit() {
+    int n, first, last;
+    printf("\n(i) Sum of First and Last Digit\n");
+    printf("Enter a four-digit number: ");
+    scanf("%d", &n);
+
+    last = n % 10;
+    first = n;
+    while (first >= 10) {
+        first /= 10;
+    }
+
+    printf("Sum of first and last digit = %d\n", first + last);
+
+    /* Sample Output:
+       Enter a four-digit number: 1234
+       Sum of first and last digit = 5
+    */
+}
+
+/* (j) Illiterate men and women */
+void illiterate_men_women() {
+    int population = 80000;
+    int men, women, literate, literate_men;
+    int illiterate_men, illiterate_women, literate_women;
+
+    printf("\n(j) Illiterate Men and Women\n");
+
+    men = 52 * population / 100;
+    women = population - men;
+    literate = 48 * population / 100;
+    literate_men = 35 * population / 100;
+
+    illiterate_men = men - literate_men;
+    literate_women = literate - literate_men;
+    illiterate_women = women - literate_women;
+
+    printf("Illiterate men = %d\n", illiterate_men);
+    printf("Illiterate women = %d\n", illiterate_women);
+
+    /* Sample Output:
+       Illiterate men = 13600
+       Illiterate women = 28000
+    */
+}
+
+/* (k) Currency notes */
+void currency_notes() {
+    int amount, n100, n50, n10;
+
+    printf("\n(k) Currency Notes\n");
+    printf("Enter amount: ");
+    scanf("%d", &amount);
+
+    n100 = amount / 100;
+    amount %= 100;
+
+    n50 = amount / 50;
+    amount %= 50;
+
+    n10 = amount / 10;
+
+    printf("100 notes = %d\n", n100);
+    printf("50 notes  = %d\n", n50);
+    printf("10 notes  = %d\n", n10);
+
+    /* Sample Output:
+       Enter amount: 880
+       100 notes = 8
+       50 notes  = 1
+       10 notes  = 3
+    */
+}
+/* (l) Cost price of one item */
+void cost_price_one_item() {
+    float total_sp, total_profit, total_cp, cp_one;
+
+    printf("\n(l) Cost Price of One Item\n");
+    printf("Enter total selling price of 15 items: ");
+    scanf("%f", &total_sp);
+    printf("Enter total profit: ");
+    scanf("%f", &total_profit);
+
+    total_cp = total_sp - total_profit;
+    cp_one = total_cp / 15.0f;
+
+    printf("Cost price of one item = %.2f\n", cp_one);
+
+    /* Sample Output:
+       Enter total selling price of 15 items: 1800
+       Enter total profit: 300
+       Cost price of one item = 100.00
+    */
+}
+
+/* (m) Add one to each digit */
+void add_one_each_digit() {
+    int n, digit, result = 0, place = 1;
+
+    printf("\n(m) Add One to Each Digit\n");
+    printf("Enter a five-digit number: ");
+    scanf("%d", &n);
+
+    while (n > 0) {
+        digit = n % 10;
+        digit = (digit + 1) % 10;
+        result += digit * place;
+        place *= 10;
+        n /= 10;
+    }
+
+    printf("New number = %d\n", result);
+
+    /* Sample Output:
+       Enter a five-digit number: 12391
+       New number = 23402
+    */
+}
+
+int main() {
+    int choice;
+
+    do {
+        printf("\n===== Chapter 1 Assignment =====\n");
+        printf("1. Gross salary\n");
+        printf("2. Distance conversion\n");
+        printf("3. Aggregate and percentage\n");
+        printf("4. Fahrenheit to Centigrade\n");
+        printf("5. Rectangle and circle\n");
+        printf("6. Interchange two numbers\n");
+        printf("7. Sum of digits\n");
+        printf("8. Reverse number\n");
+        printf("9. Sum of first and last digit\n");
+        printf("10. Illiterate men and women\n");
+        printf("11. Currency notes\n");
+        printf("12. Cost price of one item\n");
+        printf("13. Add one to each digit\n");
+        printf("0. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1: gross_salary(); break;
+            case 2: distance_conversion(); break;
+            case 3: aggregate_percentage(); break;
+            case 4: fahrenheit_to_centigrade(); break;
+            case 5: rectangle_circle(); break;
+            case 6: interchange_numbers(); break;
+            case 7: sum_of_digits(); break;
+            case 8: reverse_number(); break;
+            case 9: sum_first_last_digit(); break;
+            case 10: illiterate_men_women(); break;
+            case 11: currency_notes(); break;
+            case 12: cost_price_one_item(); break;
+            case 13: add_one_each_digit(); break;
+            case 0: printf("Exiting...\n"); break;
+            default: printf("Invalid choice!\n");
+        }
+    } while (choice != 0);
+
+    return 0;
+}
+```
+/**
+ ## Notes
+- I used separate functions so the file stays neat and easy to present.
+- Each program includes a small sample output in comments.
+- You can compile it with `gcc file.c -o file`. [scribd](https://www.scribd.com/document/325183864/let-us-c-chapter-1-pdf)
+
+If you want, I can also convert this into:
+- a **single-file lab record format**,
+- **13 separate .c files**, or
+- a **PDF-style assignment layout**.
+
+**/
