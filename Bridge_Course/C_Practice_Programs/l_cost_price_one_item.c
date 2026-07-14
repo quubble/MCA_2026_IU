@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){float sp,p,cp;printf("Enter total selling price of 15 items: ");scanf("%f",&sp);printf("Enter total profit: ");scanf("%f",&p);cp=(sp-p)/15.0f;printf("Cost price of one item = %.2f\n",cp);return 0;}

@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){const float PI=3.14159f;float l,b,r;printf("Enter length breadth radius: ");scanf("%f%f%f",&l,&b,&r);printf("Rectangle area = %.2f\n",l*b);printf("Rectangle perimeter = %.2f\n",2*(l+b));printf("Circle area = %.2f\n",PI*r*r);printf("Circle circumference = %.2f\n",2*PI*r);return 0;}

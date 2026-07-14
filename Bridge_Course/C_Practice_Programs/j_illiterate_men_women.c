@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){int pop=80000,men,women,lit,lm,ilm,ilw,lw;men=52*pop/100;women=pop-men;lit=48*pop/100;lm=35*pop/100;ilm=men-lm;lw=lit-lm;ilw=women-lw;printf("Illiterate men = %d\nIlliterate women = %d\n",ilm,ilw);return 0;}

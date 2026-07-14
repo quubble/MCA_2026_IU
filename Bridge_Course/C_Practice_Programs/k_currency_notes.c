@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){int amt,n100,n50,n10;printf("Enter amount: ");scanf("%d",&amt);n100=amt/100;amt%=100;n50=amt/50;amt%=50;n10=amt/10;printf("100 notes = %d\n50 notes = %d\n10 notes = %d\n",n100,n50,n10);return 0;}
