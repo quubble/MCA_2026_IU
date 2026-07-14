@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){int n,p=0,ne=0,z=0,ch=1;while(ch){printf("Enter number: ");scanf("%d",&n);if(n>0)p++;else if(n<0)ne++;else z++;printf("Continue(1/0): ");scanf("%d",&ch);}printf("Positive=%d\nNegative=%d\nZero=%d\n",p,ne,z);return 0;}

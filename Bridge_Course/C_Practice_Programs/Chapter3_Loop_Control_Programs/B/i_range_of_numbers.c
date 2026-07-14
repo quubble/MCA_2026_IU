@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){int n,x,min,max,i;printf("How many numbers? ");scanf("%d",&n);scanf("%d",&x);min=max=x;for(i=2;i<=n;i++){scanf("%d",&x);if(x<min)min=x;if(x>max)max=x;}printf("Range=%d\n",max-min);return 0;}

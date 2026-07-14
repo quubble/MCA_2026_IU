@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){int m=21,u,c;while(m>1){printf("Matchsticks=%d\nPick 1-4: ",m);scanf("%d",&u);if(u<1||u>4)continue;c=5-u;m-=u+c;printf("Computer picks %d\n",c);}printf("You are forced to pick the last matchstick. You lose.\n");return 0;}
