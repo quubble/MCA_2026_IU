@@ -9,13 +9,13 @@ int main()
 
     // Take input from the user
     printf("Enter the last number: ");
-    scanf("%d", &number);
+    scanf("%d", &n);
 
     // Display heading
     printf("Prime numbers are:\n");
 
     // Check every number from 2 up to the entered number
-    for (i = 2; i <= number; i++)
+    for (i = 2; i <= n; i++)
     {
         // Assume the current number is prime
         prime = 1;
