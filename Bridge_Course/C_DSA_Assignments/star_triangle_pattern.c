@@ -1,3 +1,5 @@
+// Half Pyramid Upward Right angled triangle star pattern 
+
 #include <stdio.h>
 
 int main(void) {
