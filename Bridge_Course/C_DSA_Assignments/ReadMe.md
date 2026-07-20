@@ -5,7 +5,7 @@ Greetings,
 
 In this 2nd assignment:
 
-Following codes are not uploaded, as unable to grasp the logic.
+Following codes are now uploaded, on 20th July 2026.
 
 1. Floyd's Triangle
 2. Pascal Triangle
