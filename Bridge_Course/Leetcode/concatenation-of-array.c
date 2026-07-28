@@ -24,3 +24,9 @@ int* getConcatenation(int* nums, int numsSize, int* returnSize) {
     // Return the newly created array
     return ans;
 }
+
+
+//Complexity
+//Time complexity: O(n) because we visit each element once.
+
+//Space complexity: O(n) because we create a new array.
