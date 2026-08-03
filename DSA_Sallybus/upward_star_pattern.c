@@ -1,4 +1,4 @@
-//upward star pattern
+//downward star pattern
 
 #include <stdio.h>
 
@@ -8,6 +8,7 @@ int main()
 
     printf("Enter number of rows: ");
     scanf("%d", &rows);
+    
 //corelogic starts
     for(i = rows; i >= 1; i--)
     {
