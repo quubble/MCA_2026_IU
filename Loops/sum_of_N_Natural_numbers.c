@@ -1,6 +1,6 @@
 /******************************************************************************
 
-                            Online C Compiler.
+                            Online C Compiler - https://onlinegdb.com/
                 Code, Compile, Run and Debug C program online.
 Write your code in this editor and press "Run" button to compile and execute it.
 
@@ -22,7 +22,9 @@ printf("the sum is: %d", sum);
 
 int main()
 {
-  int num =100;
+  int num =0;
+  printf("Enter the natural number to sum upto: ");
+  scanf("%d", &num);
   sum(num);  
 
     return 0;
