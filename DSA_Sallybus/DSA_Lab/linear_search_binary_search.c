@@ -2,21 +2,29 @@
 
 void lsearch(int n, int key, int arr[])
 {
-    for(int i =0; i<n;i++){
-        if(arr[i]==key){
-            printf("key found at %d position\n", i+1);
-            return;
+    int found = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == key)
+        {
+            printf("Key found at position %d\n", i + 1);
+            found = 1;
         }
     }
-    printf("key not found\n");
+
+    if (found == 0)
+    {
+        printf("Key not found\n");
+    }
 }
 
-int bis(int n, int key, int arr[])
+void bis(int n, int key, int arr[])
 {
     int left = 0;
     int right = n - 1;
     int mid;
-    int found = -1;
+    int found = 0;
 
     while (left <= right)
     {
@@ -24,7 +32,27 @@ int bis(int n, int key, int arr[])
 
         if (arr[mid] == key)
         {
-            found = mid;
+            found = 1;
+
+            // Print the current position
+            printf("Key found at position %d\n", mid + 1);
+
+            // Check left side for duplicates
+            int i = mid - 1;
+            while (i >= 0 && arr[i] == key)
+            {
+                printf("Key found at position %d\n", i + 1);
+                i--;
+            }
+
+            // Check right side for duplicates
+            i = mid + 1;
+            while (i < n && arr[i] == key)
+            {
+                printf("Key found at position %d\n", i + 1);
+                i++;
+            }
+
             break;
         }
         else if (arr[mid] < key)
@@ -37,23 +65,23 @@ int bis(int n, int key, int arr[])
         }
     }
 
-    return found;
+    if (found == 0)
+    {
+        printf("Key not found\n");
+    }
 }
 
 int main()
 {
-    int n = 5, key = 120;
-    int arr[] = {45,67, 120,890, 2100};
+    int n = 8, key = 120;
+
+    int arr[] = {45, 67, 120, 120, 120, 890, 1200, 2100};
+
+    printf("Linear Search:\n");
     lsearch(n, key, arr);
-    
-    int result = bis(n, key,arr);
-    if(result !=-1)
-    {
-        printf("\nkey found at %d position", result+1);
-    }
-    else{
-        printf("\n\nbs key not found");
-    }
+
+    printf("\nBinary Search:\n");
+    bis(n, key, arr);
 
     return 0;
 }
